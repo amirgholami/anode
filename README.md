@@ -46,5 +46,5 @@ on three networks of AlexNet, ResNet-4, and Resnet-10 on Cifar-10. For more deta
 # Reference
 If you found this code useful, we appreciate it if you could please cite the following papers:
 
-- Amir Gholami, Kurt Keutzer, and George Biros, ANODE: Unconditionally AccurateMemory-Efficient Gradients for Neural ODEs, International Joint Conferences on Artificial Intelligence (IJCAI'19), 2019.
-- Zhang, Tianjun, Zhewei Yao, Amir Gholami, Kurt Keutzer, Joseph Gonzalez, George Biros, and Michael Mahoney. "ANODEV2: A Coupled Neural ODE Evolution Framework." arXiv preprint arXiv:1906.04596 (2019).
+- Amir Gholami, Kurt Keutzer, and George Biros, *ANODE: Unconditionally Accurate Memory-Efficient Gradients for Neural ODEs*, International Joint Conferences on Artificial Intelligence (IJCAI'19), 2019.
+- Zhang, Tianjun, Zhewei Yao, Amir Gholami, Kurt Keutzer, Joseph Gonzalez, George Biros, and Michael Mahoney. *ANODEV2: A Coupled Neural ODE Evolution Framework*, arXiv preprint arXiv:1906.04596 (2019).
