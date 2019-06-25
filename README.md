@@ -1,3 +1,5 @@
+![drawing](misc/anode.png  | width=200px)   
+
 # ANODE: Adjoint Based Neural ODEs
 ANODE is a neural ODE framework based on [this paper](https://arxiv.org/pdf/1902.10298.pdf).
 It provides unconditionally accurate gradients for Neural ODEs, using adjoint method. It also
