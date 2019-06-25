@@ -1,4 +1,6 @@
-![drawing](misc/anode.png  | width=200px)   
+![ANODE](misc/anode.png)   
+
+
 
 # ANODE: Adjoint Based Neural ODEs
 ANODE is a neural ODE framework based on [this paper](https://arxiv.org/pdf/1902.10298.pdf).
