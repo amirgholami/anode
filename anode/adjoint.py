@@ -20,9 +20,16 @@ import torch.nn as nn
 from . import odesolver
 from torch.autograd import Variable
 
-
 def flatten_params(params):
     flat_params = [p.contiguous().view(-1) for p in params]
+    return torch.cat(flat_params) if len(flat_params) > 0 else torch.tensor([])
+
+def flatten_params_grad(params, params_ref):
+    _params = [p for p in params]
+    _params_ref = [p for p in params_ref]
+    flat_params = [p.contiguous().view(-1) if p is not None else torch.zeros_like(q).view(-1)
+        for p, q in zip(_params, _params_ref)]
+
     return torch.cat(flat_params) if len(flat_params) > 0 else torch.tensor([])
 
 class Checkpointing_Adjoint(torch.autograd.Function):
@@ -52,11 +59,12 @@ class Checkpointing_Adjoint(torch.autograd.Function):
             func_eval = odesolver(func, z, options) 
             out1 = torch.autograd.grad(
                func_eval,  z,
-               grad_output, allow_unused=False, retain_graph=True)
+               grad_output, allow_unused=True, retain_graph=True)
             out2 = torch.autograd.grad(
                func_eval,  f_params,
-               grad_output, allow_unused=False, retain_graph=True)
-        return out1[0], None,flatten_params(out2), None
+               grad_output, allow_unused=True, retain_graph=True)
+
+        return out1[0], None, flatten_params_grad(out2, func.parameters()), None
 
 
 
