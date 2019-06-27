@@ -41,6 +41,8 @@ on three networks of AlexNet, ResNet-4, and Resnet-10 on Cifar-10. For more deta
 
 ![ANODE](misc/comparison.png)   
 
+![ANODE](misc/sqnxt_rk2.png)   
+Comparison of ANODE and Neural ODE using RK-2 discretization method on SqueezeNext model.
 
 
 # Reference
