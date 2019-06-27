@@ -42,7 +42,10 @@ on three networks of AlexNet, ResNet-4, and Resnet-10 on Cifar-10. For more deta
 ![ANODE](misc/comparison.png)   
 
 ![ANODE](misc/sqnxt_rk2.png)   
-Comparison of ANODE and Neural ODE using RK-2 discretization method on SqueezeNext model.
+Comparison of ANODE and [Neural ODE](https://arxiv.org/abs/1806.07366) using RK-2 discretization method on Cifar-10 using SqueezeNext model.
+ANODE converges to lower training loss and higher testing accuracy, since it computes unconditionally accurate gradients whereas
+the Neural ODE approach may suffer from numerical instability associated with solving forward ODE, backwards in time.
+For more details please see [this paper](https://arxiv.org/pdf/1902.10298.pdf).
 
 
 # Reference
